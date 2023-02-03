@@ -36,6 +36,56 @@ spec:
                 secretKeyRef:
                   key: APP_CONFIG_backend_listen_port
                   name: values-app-config
+            - name: APP_CONFIG_app_baseUrl
+              valueFrom:
+                secretKeyRef:
+                  key: APP_CONFIG_app_baseUrl
+                  name: values-app-config
+            - name: APP_CONFIG_backend_baseUrl
+              valueFrom:
+                secretKeyRef:
+                  key: APP_CONFIG_backend_baseUrl
+                  name: values-app-config
+            - name: APP_CONFIG_backend_cors_origin
+              valueFrom:
+                secretKeyRef:
+                  key: APP_CONFIG_backend_cors_origin
+                  name: values-app-config
+            - name: APP_CONFIG_auth_environment
+              valueFrom:
+                secretKeyRef:
+                  key: APP_CONFIG_auth_environment
+                  name: values-app-config
+            - name: APP_CONFIG_catalog_providers_keycloakOrg_default_baseUrl
+              valueFrom:
+                secretKeyRef:
+                  key: APP_CONFIG_catalog_providers_keycloakOrg_default_baseUrl
+                  name: values-app-config
+            - name: APP_CONFIG_catalog_providers_keycloakOrg_default_loginRealm
+              valueFrom:
+                secretKeyRef:
+                  key: APP_CONFIG_catalog_providers_keycloakOrg_default_loginRealm
+                  name: values-app-config
+            - name: APP_CONFIG_catalog_providers_keycloakOrg_default_realm
+              valueFrom:
+                secretKeyRef:
+                  key: APP_CONFIG_catalog_providers_keycloakOrg_default_realm
+                  name: values-app-config
+            - name: APP_CONFIG_catalog_providers_keycloakOrg_default_clientId
+              valueFrom:
+                secretKeyRef:
+                  key: APP_CONFIG_catalog_providers_keycloakOrg_default_clientId
+                  name: values-app-config
+            - name: APP_CONFIG_catalog_providers_keycloakOrg_default_clientSecret
+              valueFrom:
+                secretKeyRef:
+                  key: APP_CONFIG_catalog_providers_keycloakOrg_default_clientSecret
+                  name: values-app-config
+            - name: NODE_TLS_REJECT_UNAUTHORIZED
+              valueFrom:
+                secretKeyRef:
+                  key: NODE_TLS_REJECT_UNAUTHORIZED
+                  name: values-app-config
           ports:
             - name: backend
               containerPort: 7007
@@ -56,6 +106,26 @@ spec:
             valueFrom:
               secretKeyRef:
                 key: OAUTH2_PROXY_CLIENT_ID
+                name: oauth2-secret
+          - name: OAUTH2_PROXY_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                key: OAUTH2_PROXY_CLIENT_SECRET
+                name: oauth2-secret
+          - name: OAUTH2_PROXY_COOKIE_SECRET
+            vvalueFrom:
+              secretKeyRef:
+                key: OAUTH2_PROXY_COOKIE_SECRET
+                name: oauth2-secret
+          - name: OAUTH2_PROXY_OIDC_ISSUER_URL
+            valueFrom:
+              secretKeyRef:
+                key: OAUTH2_PROXY_OIDC_ISSUER_URL
+                name: oauth2-secret
+          - name: OAUTH2_PROXY_SSL_INSECURE_SKIP_VERIFY
+            valueFrom:
+              secretKeyRef:
+                key: OAUTH2_PROXY_SSL_INSECURE_SKIP_VERIFY
                 name: oauth2-secret
           image: quay.io/oauth2-proxy/oauth2-proxy:latest
           imagePullPolicy: IfNotPresent
