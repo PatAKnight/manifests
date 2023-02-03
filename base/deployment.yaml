@@ -106,27 +106,27 @@ spec:
             valueFrom:
               secretKeyRef:
                 key: OAUTH2_PROXY_CLIENT_ID
-                name: oauth2-secret
+                name: oauth2-values
           - name: OAUTH2_PROXY_CLIENT_SECRET
             valueFrom:
               secretKeyRef:
                 key: OAUTH2_PROXY_CLIENT_SECRET
-                name: oauth2-secret
+                name: oauth2-values
           - name: OAUTH2_PROXY_COOKIE_SECRET
             vvalueFrom:
               secretKeyRef:
                 key: OAUTH2_PROXY_COOKIE_SECRET
-                name: oauth2-secret
+                name: oauth2-values
           - name: OAUTH2_PROXY_OIDC_ISSUER_URL
             valueFrom:
               secretKeyRef:
                 key: OAUTH2_PROXY_OIDC_ISSUER_URL
-                name: oauth2-secret
+                name: oauth2-values
           - name: OAUTH2_PROXY_SSL_INSECURE_SKIP_VERIFY
             valueFrom:
               secretKeyRef:
                 key: OAUTH2_PROXY_SSL_INSECURE_SKIP_VERIFY
-                name: oauth2-secret
+                name: oauth2-values
           image: quay.io/oauth2-proxy/oauth2-proxy:latest
           imagePullPolicy: IfNotPresent
           name: oauth2-proxy
