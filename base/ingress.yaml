@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - backstage.apps.ci-ln-njg3znk-76ef8.origin-ci-int-aws.dev.rhcloud.com
+      - backstage.apps.ci-ln-bzdkmib-76ef8.aws-2.ci.openshift.org
       secretName: custom-certs-default
   rules:
-    - host: backstage.apps.ci-ln-njg3znk-76ef8.origin-ci-int-aws.dev.rhcloud.com
+    - host: backstage.apps.ci-ln-bzdkmib-76ef8.aws-2.ci.openshift.org
       http:
         paths:
           - path: /
