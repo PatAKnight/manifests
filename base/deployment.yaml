@@ -21,9 +21,9 @@ spec:
       containers:
         - resources:
             limits:
-              cpu: 300m
+              cpu: 500m
             requests:
-              cpu: 200m
+              cpu: 400m
           name: backstage-showcase
           image: quay.io/rh_ee_pknight/backstage-showcase:key
           imagePullPolicy: "Always"
@@ -87,9 +87,9 @@ spec:
               protocol: TCP
         - resources:
             limits:
-              cpu: 300m
+              cpu: 500m
             requests:
-              cpu: 200m
+              cpu: 400m
           args:
           - --provider=oidc
           - --email-domain=*
