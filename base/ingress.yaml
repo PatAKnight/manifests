@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: backstage
+  namespace: "backstage"
+  labels:
+    app.kubernetes.io/component: backstage
+  annotations:
+spec:
+  tls:
+    - hosts:
+      - backstage.apps.ci-ln-njg3znk-76ef8.origin-ci-int-aws.dev.rhcloud.com
+      secretName: custom-certs-default
+  rules:
+    - host: backstage.apps.ci-ln-njg3znk-76ef8.origin-ci-int-aws.dev.rhcloud.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: backstage
+                port:
+                  number: 4180
