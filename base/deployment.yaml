@@ -113,7 +113,7 @@ spec:
                 key: OAUTH2_PROXY_CLIENT_SECRET
                 name: oauth2-values
           - name: OAUTH2_PROXY_COOKIE_SECRET
-            vvalueFrom:
+            valueFrom:
               secretKeyRef:
                 key: OAUTH2_PROXY_COOKIE_SECRET
                 name: oauth2-values
