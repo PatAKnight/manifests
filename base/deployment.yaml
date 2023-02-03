@@ -31,11 +31,6 @@ spec:
             - node
             - packages/backend
           env:
-            - name: APP_CONFIG_backend_listen_port
-              valueFrom:
-                secretKeyRef:
-                  key: APP_CONFIG_backend_listen_port
-                  name: values-app-config
             - name: APP_CONFIG_app_baseUrl
               valueFrom:
                 secretKeyRef:
