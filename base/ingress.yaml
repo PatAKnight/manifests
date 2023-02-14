@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - backstage.apps.ci-ln-bzdkmib-76ef8.aws-2.ci.openshift.org
+      - backstage.apps-crc.testing
       secretName: custom-certs-default
   rules:
-    - host: backstage.apps.ci-ln-bzdkmib-76ef8.aws-2.ci.openshift.org
+    - host: backstage.apps-crc.testing
       http:
         paths:
           - path: /
@@ -21,4 +21,4 @@ spec:
               service:
                 name: backstage
                 port:
-                  number: 4180
+                  number: 7007
