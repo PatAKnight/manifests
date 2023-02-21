@@ -7,3 +7,4 @@ resources:
   - service.yaml
 commonLabels:
   application: keycloak
+  app.kubernetes.io/part-of: keycloak
