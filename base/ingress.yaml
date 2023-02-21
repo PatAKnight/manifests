@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - janus-idp.apps.ci-ln-l3p8hjb-76ef8.aws-2.ci.openshift.org
+      - janus-idp.apps.ci-ln-ik94yw2-76ef8.origin-ci-int-aws.dev.rhcloud.com
       secretName: janus-idp-cert
   rules:
-    - host: janus-idp.apps.ci-ln-l3p8hjb-76ef8.aws-2.ci.openshift.org
+    - host: janus-idp.apps.ci-ln-ik94yw2-76ef8.origin-ci-int-aws.dev.rhcloud.com
       http:
         paths:
           - path: /
