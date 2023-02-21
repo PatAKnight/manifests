@@ -2,9 +2,6 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
   name: keycloak
-  labels:
-    application: keycloak
-    app.kubernetes.io/part-of: keycloak
 spec:
   replicas: 1
   selector:

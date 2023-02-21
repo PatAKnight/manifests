@@ -6,8 +6,10 @@ resources:
   - ingress.yaml
   - service.yaml
   - keycloak
-commonLabels:
-    app.kubernetes.io/name: backstage
-    app.kubernetes.io/instance: backstage
-    backstage.io/kubernetes-id: backstage
-    app.kubernetes.io/part-of: backstage
+labels:
+  - pairs:
+      app.kubernetes.io/name: backstage
+      app.kubernetes.io/instance: backstage
+      backstage.io/kubernetes-id: backstage
+      app.kubernetes.io/part-of: backstage
+    includeSelectors: false

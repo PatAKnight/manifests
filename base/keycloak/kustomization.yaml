@@ -5,3 +5,7 @@ resources:
   - deploymentconfig.yaml
   - ingress.yaml
   - service.yaml
+labels:
+  - pairs:
+      application: keycloak
+    includeSelectors: false
