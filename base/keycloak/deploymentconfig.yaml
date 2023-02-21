@@ -1,8 +1,6 @@
 apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
-  labels:
-    application: keycloak
   name: keycloak
 spec:
   replicas: 1
