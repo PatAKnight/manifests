@@ -5,6 +5,4 @@ resources:
   - deploymentconfig.yaml
   - route.yaml
   - service.yaml
-commonLabels:
-  application: keycloak
-  app.kubernetes.io/part-of: keycloak
+  
