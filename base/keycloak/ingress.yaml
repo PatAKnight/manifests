@@ -3,6 +3,9 @@ kind: Ingress
 metadata:
   name: keycloak
 spec:
+  tls:
+    - host: keycloak-default.apps.ci-ln-l3p8hjb-76ef8.aws-2.ci.openshift.org
+      secretName: janus-idp-cert
   rules:
     - host: keycloak-default.apps.ci-ln-l3p8hjb-76ef8.aws-2.ci.openshift.org
       http:
