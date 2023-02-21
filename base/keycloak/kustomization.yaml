@@ -5,5 +5,4 @@ resources:
   - deploymentconfig.yaml
   - ingress.yaml
   - service.yaml
-  - keycloak
   

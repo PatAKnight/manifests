@@ -19,12 +19,12 @@ spec:
     spec:
       containers:
         - env:
-          - name: KEYCLOAK_ADMIN
-            value: admin
-          - name: KEYCLOAK_ADMIN_PASSWORD
-            value: admin
-          - name: KC_PROXY
-            value: edge
+            - name: KEYCLOAK_ADMIN
+              value: admin
+            - name: KEYCLOAK_ADMIN_PASSWORD
+              value: admin
+            - name: KC_PROXY
+              value: edge
           image: quay.io/keycloak/keycloak:20.0.3
           livenessProbe:
             failureThreshold: 100
@@ -50,8 +50,8 @@ spec:
             - mountPath: /opt/keycloak/data
               name: empty
           args: ["start-dev"]
-        volumes:
-          - name: empty
-            emptyDir: []
-      triggers:
-        - type: ConfigChange
+      volumes:
+        - name: empty
+          emptyDir: {}
+  triggers:
+    - type: ConfigChange
