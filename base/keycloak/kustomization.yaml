@@ -3,6 +3,5 @@ kind: Kustomization
 namespace: janus-idp
 resources: 
   - deploymentconfig.yaml
-  - route.yaml
+  - ingress.yaml
   - service.yaml
-  
