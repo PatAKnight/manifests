@@ -5,10 +5,10 @@ metadata:
 spec:
   tls:
     - hosts: 
-      - keycloak-janus-idp.apps.ci-ln-8jrrn7t-76ef8.aws-2.ci.openshift.org
+      - keycloak-janus-idp.apps.ci-ln-x2ycq1t-76ef8.origin-ci-int-aws.dev.rhcloud.com
       secretName: janus-idp-cert2
   rules:
-    - host: keycloak-janus-idp.apps.ci-ln-8jrrn7t-76ef8.aws-2.ci.openshift.org
+    - host: keycloak-janus-idp.apps.ci-ln-x2ycq1t-76ef8.origin-ci-int-aws.dev.rhcloud.com
       http:
         paths:
           - pathType: Prefix

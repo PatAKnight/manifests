@@ -5,6 +5,8 @@ metadata:
   namespace: "janus-idp"
   labels: 
     app.kubernetes.io/component: backstage
+  annotations:
+    backstage.io/kubernetes-id: janus-idp
 spec:
   replicas: 1
   selector:
@@ -25,7 +27,7 @@ spec:
             requests:
               cpu: 400m
           name: backstage-showcase
-          image: quay.io/rh_ee_pknight/backstage-showcase:newkey
+          image: quay.io/rh_ee_pknight/backstage-showcase:test
           imagePullPolicy: "Always"
           command:
             - node
