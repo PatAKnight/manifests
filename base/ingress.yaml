@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - janus-idp.apps.ci-ln-x2ycq1t-76ef8.origin-ci-int-aws.dev.rhcloud.com
+      - janus-idp.apps.ci-ln-5iy9cit-76ef8.origin-ci-int-aws.dev.rhcloud.com
       secretName: janus-idp-cert
   rules:
-    - host: janus-idp.apps.ci-ln-x2ycq1t-76ef8.origin-ci-int-aws.dev.rhcloud.com
+    - host: janus-idp.apps.ci-ln-5iy9cit-76ef8.origin-ci-int-aws.dev.rhcloud.com
       http:
         paths:
           - path: /
