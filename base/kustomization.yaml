@@ -10,6 +10,6 @@ labels:
   - pairs:
       app.kubernetes.io/name: backstage
       app.kubernetes.io/instance: backstage
-      backstage.io/kubernetes-id: backstage
+      backstage.io/kubernetes-id: janus-idp
       app.kubernetes.io/part-of: backstage
     includeSelectors: false
