@@ -14,12 +14,9 @@ spec:
       app.kubernetes.io/component: backstage
   strategy:
     type: RollingUpdate
-    rollingParams:
-      updatePeriodSeconds: 1
-      intervalSeconds: 1
-      timeoutSeconds: 120
-      maxSurge: "20%"
-      maxUnavailable: "0%"
+    rollingUpdate:
+      maxSurge: "25%"
+      maxUnavailable: "25%"
   template:
     metadata:
       labels:
@@ -48,3 +45,13 @@ spec:
             - name: backend
               containerPort: 7007
               protocol: TCP
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 7007
+              scheme: HTTP
+            initialDelaySeconds: 3
+            timeoutSeconds: 1
+            periodSeconds: 30
+            successThreshold: 1
+            failureThreshold: 3
