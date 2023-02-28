@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - backstage.apps.ci-ln-ci0v6l2-76ef8.origin-ci-int-aws.dev.rhcloud.com
+      - backstage.apps.ci-ln-2gj3v0k-76ef8.origin-ci-int-aws.dev.rhcloud.com
       secretName: janus-idp-cert
   rules:
-    - host: backstage.apps.ci-ln-ci0v6l2-76ef8.origin-ci-int-aws.dev.rhcloud.com
+    - host: backstage.apps.ci-ln-2gj3v0k-76ef8.origin-ci-int-aws.dev.rhcloud.com
       http:
         paths:
           - path: /

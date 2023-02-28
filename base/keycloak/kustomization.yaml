@@ -5,6 +5,7 @@ resources:
   - deploymentconfig.yaml
   - ingress.yaml
   - service.yaml
+  - certificate.yaml
 labels:
   - pairs:
       application: keycloak
