@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: ssl-certificate
+  name: keycloak-ssl-certificate
 spec:
   dnsNames:
     - keycloak-janus-idp.apps.ci-ln-2gj3v0k-76ef8.origin-ci-int-aws.dev.rhcloud.com
