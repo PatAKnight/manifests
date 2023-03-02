@@ -6,6 +6,7 @@ spec:
   dnsNames:
     - back.apps.ci-ln-x88c6b2-76ef8.origin-ci-int-aws.dev.rhcloud.com
     - test.apps.ci-ln-x88c6b2-76ef8.origin-ci-int-aws.dev.rhcloud.com
+    - one.apps.ci-ln-x88c6b2-76ef8.origin-ci-int-aws.dev.rhcloud.com
   issuerRef:
     name: letsencrypt
   secretName: janus-idp-cert
