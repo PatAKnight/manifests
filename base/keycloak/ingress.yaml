@@ -5,10 +5,10 @@ metadata:
 spec:
   tls:
     - hosts: 
-      - key.apps.ci-ln-x88c6b2-76ef8.origin-ci-int-aws.dev.rhcloud.com
+      - key.apps-crc.testing
       secretName: keycloak-cert
   rules:
-    - host: key.apps.ci-ln-x88c6b2-76ef8.origin-ci-int-aws.dev.rhcloud.com
+    - host: key.apps-crc.testing
       http:
         paths:
           - pathType: Prefix
