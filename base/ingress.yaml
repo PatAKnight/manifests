@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - back.apps-crc.testing
+      - backstage.apps-crc.testing
       secretName: janus-idp-cert
   rules:
-    - host: back.apps-crc.testing
+    - host: backstage.apps-crc.testing
       http:
         paths:
           - path: /
