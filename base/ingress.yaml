@@ -10,21 +10,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - back.apps.ci-ln-vcflq9k-76ef8.origin-ci-int-aws.dev.rhcloud.com
-      - test.apps.ci-ln-vcflq9k-76ef8.origin-ci-int-aws.dev.rhcloud.com
+      - back.apps.ci-ln-qpmgk7k-76ef8.aws-2.ci.openshift.org
       secretName: janus-idp-cert
   rules:
-    - host: back.apps.ci-ln-vcflq9k-76ef8.origin-ci-int-aws.dev.rhcloud.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: backstage
-                port:
-                  number: 7007
-    - host: test.apps.ci-ln-vcflq9k-76ef8.origin-ci-int-aws.dev.rhcloud.com
+    - host: back.apps.ci-ln-qpmgk7k-76ef8.aws-2.ci.openshift.org
       http:
         paths:
           - path: /
