@@ -13,7 +13,7 @@ spec:
       - back.apps.ci-ln-qpmgk7k-76ef8.aws-2.ci.openshift.org
       secretName: janus-idp-cert
   rules:
-    - host: back.apps.ci-ln-qpmgk7k-76ef8.aws-2.ci.openshift.org
+    - host: back.apps.ci-ln-gz6n712-76ef8.aws-2.ci.openshift.org
       http:
         paths:
           - path: /
