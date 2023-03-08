@@ -12,12 +12,12 @@ resources:
 #     includeSelectors: false
 commonLabels:
   application: keycloak
-patchesJson6902:
+patches:
   - patch: |-
       - op: remove
-        path: /spec/selector/app.kubernetes.io/name~backstage
+        path: /spec/selector/app.kubernetes.io/name
       - op: remove
-        path: /spec/selector/app.kubernetes.io/instance~backstage
+        path: /spec/selector/app.kubernetes.io/instance
     target:
       version: v1
       kind: service
