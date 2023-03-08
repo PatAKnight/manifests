@@ -11,6 +11,7 @@ resources:
 commonLabels:
     app.kubernetes.io/name: backstage
     app.kubernetes.io/instance: backstage
+    app.kubernetes.io/part-of: backstage
 # labels:
 #   - pairs:
 #       app.kubernetes.io/name: backstage
@@ -22,6 +23,8 @@ patchesJson6902:
         path: /spec/selector/app.kubernetes.io~1name
       - op: remove
         path: /spec/selector/app.kubernetes.io~1instance
+      - op: remove
+        path: /spec/selector/app.kubernetes.io~1part-of
     target:
       kind: Service
       version: v1
