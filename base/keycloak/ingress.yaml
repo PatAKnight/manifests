@@ -5,10 +5,10 @@ metadata:
 spec:
   tls:
     - hosts: 
-      - key.apps.ci-ln-gz6n712-76ef8.aws-2.ci.openshift.org
+      - key.apps-crc.testing
       secretName: keycloak-cert
   rules:
-    - host: key.apps.ci-ln-gz6n712-76ef8.aws-2.ci.openshift.org
+    - host: key.apps-crc.testing
       http:
         paths:
           - pathType: Prefix

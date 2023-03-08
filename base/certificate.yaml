@@ -4,7 +4,7 @@ metadata:
   name: ssl-certificate
 spec:
   dnsNames:
-    - back.apps.ci-ln-gz6n712-76ef8.aws-2.ci.openshift.org
+    - back.apps-crc.testing
   issuerRef:
     name: letsencrypt
   secretName: janus-idp-cert

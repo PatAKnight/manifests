@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - back.apps.ci-ln-gz6n712-76ef8.aws-2.ci.openshift.org
+      - back.apps-crc.testing
       secretName: janus-idp-cert
   rules:
-    - host: back.apps.ci-ln-gz6n712-76ef8.aws-2.ci.openshift.org
+    - host: back.apps-crc.testing
       http:
         paths:
           - path: /

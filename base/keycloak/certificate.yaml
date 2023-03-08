@@ -4,7 +4,7 @@ metadata:
   name: keycloak-ssl-certificate
 spec:
   dnsNames:
-    - key.apps.ci-ln-gz6n712-76ef8.aws-2.ci.openshift.org
+    - key.apps-crc.testing
   issuerRef:
     name: letsencrypt
   secretName: keycloak-cert
