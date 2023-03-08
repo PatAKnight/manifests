@@ -6,7 +6,15 @@ resources:
   - ingress.yaml
   - service.yaml
   - certificate.yaml
-labels:
-  - pairs:
-      application: keycloak
-    includeSelectors: false
+commonLabels:
+  application: keycloak
+# patchesJson6902:
+#   - patch: |-
+#       - op: remove
+#         path: /spec/selector/app.kubernetes.io/name~backstage
+#       - op: remove
+#         path: /spec/selector/app.kubernetes.io/instance~backstage
+#     target:
+#       version: v1
+#       kind: service
+#       name: keycloak
