@@ -5,8 +5,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      deploymentConfig: keycloak
+    deploymentConfig: keycloak
   strategy:
     type: Recreate
   template:
