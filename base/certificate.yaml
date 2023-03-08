@@ -4,7 +4,7 @@ metadata:
   name: ssl-certificate
 spec:
   dnsNames:
-    - back.apps-crc.testing
+    - back.apps.ci-ln-41x2fnt-76ef8.origin-ci-int-aws.dev.rhcloud.com
   issuerRef:
     name: letsencrypt
   secretName: janus-idp-cert
