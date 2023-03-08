@@ -3,15 +3,11 @@ kind: Kustomization
 namespace: janus-idp
 resources: 
   - deployment.yaml
-  - ingress.yaml
   - service.yaml
-  - certificate.yaml
+  - ingress.yaml
   - issuer.yaml
+  - certificate.yaml
   - keycloak
-labels:
-  - pairs:
-      app.kubernetes.io/name: backstage
-      app.kubernetes.io/instance: backstage
-      backstage.io/kubernetes-id: janus-idp
-      app.kubernetes.io/part-of: backstage
-    includeSelectors: false
+commonLabels:
+    app.kubernetes.io/name: backstage
+    app.kubernetes.io/instance: backstage

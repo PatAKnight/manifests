@@ -16,13 +16,9 @@ spec:
       name: keycloak
     spec:
       containers:
-        - env:
-            - name: KEYCLOAK_ADMIN
-              value: admin
-            - name: KEYCLOAK_ADMIN_PASSWORD
-              value: admin
-            - name: KC_PROXY
-              value: edge
+        - envFrom:
+            - secretRef:
+                name: janus-idp
           image: quay.io/keycloak/keycloak:20.0.3
           livenessProbe:
             failureThreshold: 100
