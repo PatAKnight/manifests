@@ -12,12 +12,3 @@ labels:
     includeSelectors: false
 # commonLabels:
 #   application: keycloak
-patchesJson6902:
-  - patch: |-
-      - op: remove
-        path: /spec/selector/app.kubernetes.io~name
-        value: backstage
-    target:
-      kind: Service
-      version: v1
-      name: keycloak
