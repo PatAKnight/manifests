@@ -6,6 +6,7 @@ metadata:
   labels: 
     app.kubernetes.io/component: backstage
     backstage.io/kubernetes-id: janus-idp
+    app.kubernetes.io/part-of: backstage
 spec:
   replicas: 1
   selector:
