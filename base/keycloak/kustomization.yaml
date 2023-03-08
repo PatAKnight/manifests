@@ -12,3 +12,12 @@ labels:
     includeSelectors: false
 # commonLabels:
 #   application: keycloak
+patchesJson6902:
+  - patch: |-
+      - op: add
+        path: /spec/selector/test
+        value: Pat
+    target:
+      kind: service
+      version: v1
+      name: keycloak

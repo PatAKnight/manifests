@@ -3,13 +3,3 @@ kind: Kustomization
 namespace: janus-idp
 resources: 
   - ../../base
-patchesJson6902:
-  - patch: |-
-      - op: remove
-        path: /spec/selector/app.kubernetes.io~instance
-      - op: remove
-        path: /spec/selector/app.kubernetes.io~name
-    target:
-      kind: service
-      version: v1
-      name: keycloak
