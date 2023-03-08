@@ -6,9 +6,9 @@ resources:
   - ingress.yaml
   - service.yaml
   - certificate.yaml
-# labels:
-#   - pairs:
-#       application: keycloak
-#     includeSelectors: false
-commonLabels:
-  application: keycloak
+labels:
+  - pairs:
+      application: keycloak
+    includeSelectors: false
+# commonLabels:
+#   application: keycloak
