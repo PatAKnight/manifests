@@ -12,11 +12,3 @@ resources:
 #     includeSelectors: false
 commonLabels:
   application: keycloak
-patches:
-  - patch: |-
-      - op: remove
-        path: /spec/selector/
-    target:
-      version: v1
-      kind: service
-      name: keycloak
