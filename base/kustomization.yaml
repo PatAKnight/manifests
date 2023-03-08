@@ -8,6 +8,11 @@ resources:
   - issuer.yaml
   - certificate.yaml
   - keycloak
-commonLabels:
-    app.kubernetes.io/name: backstage
-    app.kubernetes.io/instance: backstage
+# commonLabels:
+#     app.kubernetes.io/name: backstage
+#     app.kubernetes.io/instance: backstage
+labels:
+  - pairs:
+      app.kubernetes.io/name: backstage
+      app.kubernetes.io/instance: backstage
+    includeSelectors: false
