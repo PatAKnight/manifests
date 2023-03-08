@@ -15,7 +15,7 @@ labels:
 patchesJson6902:
   - patch: |-
       - op: remove
-        path: /spec/selector/
+        path: /spec/selector/deploymentConfig
     target:
       kind: Service
       version: v1
