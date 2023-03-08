@@ -15,9 +15,7 @@ commonLabels:
 patches:
   - patch: |-
       - op: remove
-        path: /spec/selector/app.kubernetes.io/name
-      - op: remove
-        path: /spec/selector/app.kubernetes.io/instance
+        path: /spec/selector/
     target:
       version: v1
       kind: service
