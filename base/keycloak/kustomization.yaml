@@ -18,6 +18,6 @@ patchesJson6902:
         path: /spec/selector/test
         value: Pat
     target:
-      kind: service
+      kind: Service
       version: v1
       name: keycloak
