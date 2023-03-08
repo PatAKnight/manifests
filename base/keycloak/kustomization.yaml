@@ -14,9 +14,8 @@ labels:
 #   application: keycloak
 patchesJson6902:
   - patch: |-
-      - op: add
-        path: /spec/selector/test
-        value: Pat
+      - op: remove
+        path: /spec/selector/app.kubernetes.io~name
     target:
       kind: Service
       version: v1
