@@ -8,10 +8,6 @@ metadata:
   annotations:
     backstage.io/kubernetes-id: janus-idp
 spec:
-  tls:
-    - hosts:
-      - backstage.apps-crc.testing
-      secretName: janus-idp-cert
   rules:
     - host: backstage.apps-crc.testing
       http:

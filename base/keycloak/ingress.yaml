@@ -3,10 +3,6 @@ kind: Ingress
 metadata:
   name: keycloak
 spec:
-  tls:
-    - hosts: 
-      - key.apps-crc.testing
-      secretName: keycloak-cert
   rules:
     - host: key.apps-crc.testing
       http:
