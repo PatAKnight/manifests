@@ -33,7 +33,7 @@ spec:
             requests:
               cpu: 400m
           name: backstage-showcase
-          image: quay.io/rh_ee_pknight/backstage-showcase:topology
+          image: quay.io/rh_ee_pknight/backstage-showcase:keycloak
           imagePullPolicy: "Always"
           command:
             - node
@@ -55,4 +55,21 @@ spec:
             periodSeconds: 30
             successThreshold: 1
             failureThreshold: 3
-            
+        - resources: {}
+          name: oauth2-proxy
+          envFrom:
+            - secretRef:
+                name: oauth2-proxy-config
+          ports:
+            - name: oauth2-proxy
+              containerPort: 4180
+              protocol: TCP
+          imagePullPolicy: IfNotPresent
+          terminationMessagePolicy: File
+          image: 'quay.io/oauth2-proxy/oauth2-proxy:latest'
+          args:
+            - '--provider=oidc'
+            - '--email-domain=*'
+            - '--upstream=http://localhost:7007'
+            - '--http-address=0.0.0.0:4180'
+            - '--skip-provider-button'
