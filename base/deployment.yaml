@@ -33,7 +33,7 @@ spec:
             requests:
               cpu: 400m
           name: backstage-showcase
-          image: quay.io/rh_ee_pknight/backstage-showcase:topology
+          image: quay.io/rh_ee_pknight/backstage-showcase:keycloak
           imagePullPolicy: "Always"
           command:
             - node

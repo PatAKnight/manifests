@@ -2,6 +2,7 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
   name: keycloak
+  namespace: "janus-idp" 
   labels:
     app.kubernetes.io/part-of: backstage
 spec:
