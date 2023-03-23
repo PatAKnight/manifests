@@ -10,13 +10,13 @@ labels:
   - pairs:
       application: keycloak
     includeSelectors: false
-# patchesJson6902:
-#   - patch: |-
-#       - op: remove
-#         path: /spec/selector/app.kubernetes.io~1name
-#       - op: remove
-#         path: /spec/selector/app.kubernetes.io~1instance
-#     target:
-#       kind: Service
-#       version: v1
-#       name: keycloak
+patchesJson6902:
+  - patch: |-
+      - op: remove
+        path: /spec/selector/app.kubernetes.io~1name
+      - op: remove
+        path: /spec/selector/app.kubernetes.io~1instance
+    target:
+      kind: Service
+      version: v1
+      name: keycloak
