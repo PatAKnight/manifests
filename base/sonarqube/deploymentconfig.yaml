@@ -2,13 +2,11 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
   labels:
-    app: sonarqube
     deploymentconfig: sonarqube
   name: sonarqube
 spec:
   replicas: 1
   selector:
-    app: sonarqube
     deploymentconfig: sonarqube
   strategy:
     resources: {}
@@ -25,7 +23,6 @@ spec:
         openshift.io/container.sonarqube.image.entrypoint: '["./bin/run.sh"]'
       creationTimestamp: null
       labels:
-        app: sonarqube
         deploymentconfig: sonarqube
     spec:
       containers:
@@ -77,17 +74,10 @@ spec:
               cpu: 1
               memory: 2Gi
           terminationMessagePath: /dev/termination-log
-          volumeMounts:
-          - mountPath: /opt/sonarqube/data
-            name: sonarqube-data
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       securityContext: {}
       terminationGracePeriodSeconds: 30
-      volumes:
-      - name: sonarqube-data
-        persistentVolumeClaim:
-          claimName: sonarqube-data
   triggers:
   - type: ConfigChange
   - imageChangeParams:

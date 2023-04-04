@@ -3,8 +3,6 @@ kind: Ingress
 metadata:
   name: sonarqube
   namespace: "janus-idp" 
-  labels:
-    app.kubernetes.io/part-of: backstage
 spec:
   tls:
     - hosts: 
