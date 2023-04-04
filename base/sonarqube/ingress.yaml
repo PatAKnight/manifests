@@ -1,23 +1,23 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: keycloak
+  name: sonarqube
   namespace: "janus-idp" 
   labels:
     app.kubernetes.io/part-of: backstage
 spec:
   tls:
     - hosts: 
-      - key.apps.ci-ln-qwvtmmk-76ef8.aws-2.ci.openshift.org
-      secretName: keycloak-cert
+      - sonar.apps.ci-ln-qwvtmmk-76ef8.aws-2.ci.openshift.org
+      secretName: sonarqube-cert
   rules:
-    - host: key.apps.ci-ln-qwvtmmk-76ef8.aws-2.ci.openshift.org
+    - host: sonar.apps.ci-ln-qwvtmmk-76ef8.aws-2.ci.openshift.org
       http:
         paths:
           - pathType: Prefix
             path: "/"
             backend:
               service:
-                name: keycloak
+                name: sonarqube
                 port:
-                  number: 8080
+                  number: 9000

@@ -1,16 +1,23 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: janus-idp
-resources: 
+components:
+  - ../components/postgres-db
+resources:
   - deployment.yaml
   - service.yaml
   - ingress.yaml
   - issuer.yaml
   - certificate.yaml
   - keycloak
+  - postgres.yaml
+  - sonarqube
 commonLabels:
-    app.kubernetes.io/name: backstage
-    app.kubernetes.io/instance: backstage
+  app.kubernetes.io/name: backstage
+  app.kubernetes.io/instance: backstage
+images:
+  - name: backstage-showcase
+    newName: quay.io/janus-idp/backstage-showcase
 patchesJson6902:
   - patch: |-
       - op: remove
