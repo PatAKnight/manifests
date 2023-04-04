@@ -35,7 +35,7 @@ spec:
               secretKeyRef:
                 name: janus-idp-pguser-sonarqube
                 key: password
-          - name: SONARQUBE_JDBC_URL
+          - name: SONAR_JDBC_URL
             valueFrom:
               secretKeyRef:
                 name: janus-idp-pguser-sonarqube
